@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+            color: #fff;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        nav ul li a:hover {
+            color: #ccc;
+        }
+        .homepage-content {
+            text-align: center;
+            padding: 50px;
+        }
+        .topics-content {
+            text-align: center;
+            padding: 50px;
+        }
+        .topics-box {
+            border: 2px solid red;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#" onclick="showHomePage()">Home</a></li>
+        <li><a href="#" onclick="showTopics()">Topics</a></li>
+        <li><a href="#">Credits</a></li>
+    </ul>
+</nav>
+
+<div class="homepage-content" id="content">
+    <h1>Random Info!</h1>
+</div>
+
+<div class="topics-content" id="topics-content" style="display: none;">
+    <h1>Topics</h1>
+    <div class="topics-box">
+        <p style="font-weight: bold;">Subscribe to <a href="https://youtube.com/@pioritynumber1/" target="_blank">Pioritynumber1 on YouTube</a>!</p>
+    </div>
+</div>
+
+<script>
+    function showHomePage() {
+        document.getElementById('content').style.display = "block";
+        document.getElementById('topics-content').style.display = "none";
+    }
+
+    function showTopics() {
+        document.getElementById('content').style.display = "none";
+        document.getElementById('topics-content').style.display = "block";
+    }
+</script>
+
+</body>
+</html>
