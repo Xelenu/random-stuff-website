@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>raandom.info</title>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Random Information | RRMS</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            transition: background-color 0.5s ease;
         }
+
+        /* Light Mode */
+        .light-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
         nav {
             background-color: #333;
             padding: 10px 20px;
@@ -32,28 +45,38 @@
         nav ul li a:hover {
             color: #ccc;
         }
-        .homepage-content {
+        .homepage-content,
+        .topics-content,
+        .credits-content {
             text-align: center;
             padding: 50px;
         }
-        .topics-content {
-            text-align: center;
-            padding: 50px;
-        }
-        .topics-box {
+        .topics-box, .info-box {
             border: 2px solid red;
             padding: 20px;
             margin-top: 20px;
         }
+
+        /* Toggle Button */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            cursor: pointer;
+            z-index: 9999;
+        }
     </style>
 </head>
-<body>
+<body class="light-mode">
 
 <nav>
     <ul>
         <li><a href="#" onclick="showHomePage()">Home</a></li>
         <li><a href="#" onclick="showTopics()">Topics</a></li>
-        <li><a href="#">Credits</a></li>
+        <li><a href="#" onclick="showCredits()">Credits</a></li>
     </ul>
 </nav>
 
@@ -66,17 +89,43 @@
     <div class="topics-box">
         <p style="font-weight: bold;">Subscribe to <a href="https://youtube.com/@pioritynumber1/" target="_blank">Pioritynumber1 on YouTube</a>!</p>
     </div>
+    <div class="info-box" id="info-box" style="display: none;">
+        <p style="font-weight: bold; text-decoration: underline;">How do I execute scripts?</p>
+        <p>The way you can execute JavaScript on any page (Mostly any page) is to first get a script (From Github, me, etc...), copy the script's code, then go to your search bar, type in 'javascript:' and then paste, now click enter, something should happen depending on what the script is supposed to do.</p>
+    </div>
 </div>
+
+<div class="credits-content" id="credits-content" style="display: none;">
+    <h1>Credits</h1>
+    <p>Made by a student at RRMS! Another student helped me with this project, and I have lost 3.38$ on this website.</p>
+</div>
+
+<button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
 <script>
     function showHomePage() {
         document.getElementById('content').style.display = "block";
         document.getElementById('topics-content').style.display = "none";
+        document.getElementById('credits-content').style.display = "none";
+        document.getElementById('info-box').style.display = "none";
     }
 
     function showTopics() {
         document.getElementById('content').style.display = "none";
         document.getElementById('topics-content').style.display = "block";
+        document.getElementById('credits-content').style.display = "none";
+        document.getElementById('info-box').style.display = "block";
+    }
+
+    function showCredits() {
+        document.getElementById('content').style.display = "none";
+        document.getElementById('topics-content').style.display = "none";
+        document.getElementById('credits-content').style.display = "block";
+        document.getElementById('info-box').style.display = "none";
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
     }
 </script>
 
