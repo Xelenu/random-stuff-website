@@ -51,16 +51,16 @@
             text-align: center;
             padding: 50px;
         }
-        .topics-box, .info-box, .discord-box, .android-box {
+        .topics-box, .info-box, .discord-box, .android-box, .proxies-box {
             border: 2px solid red;
             padding: 20px;
             margin-top: 20px;
         }
-        .android-box p:first-child {
+        .proxies-box p:first-child {
             font-weight: bold;
             margin-bottom: 10px;
         }
-        .android-box p a {
+        .proxies-box p a {
             color: blue;
             text-decoration: underline;
         }
@@ -105,6 +105,10 @@
         <p style="font-weight: bold;">Android phone in-browser</p>
         <p>Use <a href="https://myandroid.org" target="_blank">this</a> interactive Android phone to do what your heart desires, you can play games, and search the internet, there is way so much more with this tool!</p>
     </div>
+    <div class="proxies-box" id="proxies-box" style="display: none;">
+        <p style="font-weight: bold;">A lot of Proxsies</p>
+        <p>This list of Proxsies has all of the things you could think of, like literally you can do anything, there are so many possibilities to <a href="https://docs.google.com/document/d/1nK6tJb-sxfrrQJM9bSWcAV-Fo7jHasd_dWpj4VEVg5E/preview" target="_blank">this</a>!</p>
+    </div>
     <div class="info-box" id="info-box" style="display: none;">
         <p style="font-weight: bold; text-decoration: underline;">How do I execute scripts?</p>
         <p>The way you can execute JavaScript on any page (Mostly any page) is to first get a script (From Github, me, etc...), copy the script's code, then go to your search bar, type in 'javascript:' and then paste, now click enter, something should happen depending on what the script is supposed to do.</p>
@@ -126,6 +130,7 @@
         document.getElementById('info-box').style.display = "none";
         document.getElementById('discord-box').style.display = "none";
         document.getElementById('android-box').style.display = "none";
+        document.getElementById('proxies-box').style.display = "none";
     }
 
     function showTopics() {
@@ -135,6 +140,7 @@
         document.getElementById('info-box').style.display = "block";
         document.getElementById('discord-box').style.display = "block";
         document.getElementById('android-box').style.display = "block";
+        document.getElementById('proxies-box').style.display = "block";
     }
 
     function showCredits() {
@@ -144,6 +150,7 @@
         document.getElementById('info-box').style.display = "none";
         document.getElementById('discord-box').style.display = "none";
         document.getElementById('android-box').style.display = "none";
+        document.getElementById('proxies-box').style.display = "none";
     }
 
     function toggleDarkMode() {
