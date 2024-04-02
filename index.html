@@ -51,16 +51,16 @@
             text-align: center;
             padding: 50px;
         }
-        .topics-box, .info-box, .discord-box {
+        .topics-box, .info-box, .discord-box, .android-box {
             border: 2px solid red;
             padding: 20px;
             margin-top: 20px;
         }
-        .discord-box p:first-child {
+        .android-box p:first-child {
             font-weight: bold;
             margin-bottom: 10px;
         }
-        .discord-box p a {
+        .android-box p a {
             color: blue;
             text-decoration: underline;
         }
@@ -101,6 +101,10 @@
         <p>Join L0L's Discord</p>
         <p>Join L0L's Discord server, there's a lot of Scripts and Bypasses there, just <a href="https://discord.gg/sD5FxD3ADs" target="_blank">click here</a> to join.</p>
     </div>
+    <div class="android-box" id="android-box" style="display: none;">
+        <p style="font-weight: bold;">Android phone in-browser</p>
+        <p>Use <a href="https://myandroid.org" target="_blank">this</a> interactive Android phone to do what your heart desires, you can play games, and search the internet, there is way so much more with this tool!</p>
+    </div>
     <div class="info-box" id="info-box" style="display: none;">
         <p style="font-weight: bold; text-decoration: underline;">How do I execute scripts?</p>
         <p>The way you can execute JavaScript on any page (Mostly any page) is to first get a script (From Github, me, etc...), copy the script's code, then go to your search bar, type in 'javascript:' and then paste, now click enter, something should happen depending on what the script is supposed to do.</p>
@@ -121,6 +125,7 @@
         document.getElementById('credits-content').style.display = "none";
         document.getElementById('info-box').style.display = "none";
         document.getElementById('discord-box').style.display = "none";
+        document.getElementById('android-box').style.display = "none";
     }
 
     function showTopics() {
@@ -129,6 +134,7 @@
         document.getElementById('credits-content').style.display = "none";
         document.getElementById('info-box').style.display = "block";
         document.getElementById('discord-box').style.display = "block";
+        document.getElementById('android-box').style.display = "block";
     }
 
     function showCredits() {
@@ -137,6 +143,7 @@
         document.getElementById('credits-content').style.display = "block";
         document.getElementById('info-box').style.display = "none";
         document.getElementById('discord-box').style.display = "none";
+        document.getElementById('android-box').style.display = "none";
     }
 
     function toggleDarkMode() {
